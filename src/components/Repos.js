@@ -1,9 +1,8 @@
-import React from "react";
 import styled from "styled-components";
 import { UseGithubContext } from "../context";
 import { Bar3D, Column3D, Pie3D, Doughnut2D } from "./Charts";
 
-export const Repos = () => {
+const Repos = () => {
   const { repos } = UseGithubContext();
 
   const language = repos.reduce((total, item) => {
@@ -63,6 +62,8 @@ export const Repos = () => {
     </section>
   );
 };
+
+export default Repos;
 
 const Wrapper = styled.div`
   display: grid;

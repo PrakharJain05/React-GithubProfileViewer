@@ -1,10 +1,8 @@
-import React from "react";
 import { UseGithubContext } from "../context";
 import styled from "styled-components";
 import { GoRepo, GoGist } from "react-icons/go";
 import { FiUsers, FiUserPlus } from "react-icons/fi";
-
-export const Info = () => {
+const Info = () => {
   const { githubUser } = UseGithubContext();
 
   const { public_repos, followers, following, public_gists } = githubUser;
@@ -62,6 +60,8 @@ const Item = ({ icon, label, value, color }) => {
     </article>
   );
 };
+
+export default Info;
 
 const Wrapper = styled.section`
   display: grid;

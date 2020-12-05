@@ -1,7 +1,6 @@
-import React from "react";
 import styled from "styled-components";
 
-export const Navbar = () => {
+const Navbar = () => {
   return (
     <Wrapper>
       <nav>
@@ -10,6 +9,8 @@ export const Navbar = () => {
     </Wrapper>
   );
 };
+
+export default Navbar;
 
 const Wrapper = styled.nav`
 padding:1.5rem;

@@ -1,9 +1,8 @@
-import React from "react";
 import { UseGithubContext } from "../context";
 import styled from "styled-components";
 import { MdBusiness, MdLink, MdLocationOn } from "react-icons/md";
 
-export const Card = () => {
+const Card = () => {
   const { githubUser } = UseGithubContext();
   const {
     avatar_url,
@@ -43,7 +42,9 @@ export const Card = () => {
   );
 };
 
-const Wrapper = styled.article`
+export default Card;
+
+const Wrapper = styled.section`
   background: var(--clr-white);
   padding: 1.5rem 2rem;
   border-top-right-radius: var(--radius);

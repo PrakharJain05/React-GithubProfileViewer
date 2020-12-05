@@ -1,8 +1,7 @@
-import React from "react";
 import styled from "styled-components";
 import { UseGithubContext } from "../context";
 
-export const Followers = () => {
+const Followers = () => {
   const { followers } = UseGithubContext();
 
   return (
@@ -25,7 +24,9 @@ export const Followers = () => {
   );
 };
 
-const Wrapper = styled.article`
+export default Followers;
+
+const Wrapper = styled.section`
   background: var(--clr-white);
   border-top-right-radius: var(--radius);
   border-bottom-left-radius: var(--radius);

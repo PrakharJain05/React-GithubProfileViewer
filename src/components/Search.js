@@ -1,10 +1,10 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import styled from "styled-components";
 import { MdSearch } from "react-icons/md";
 import { UseGithubContext } from "../context";
 import loadingImage from "../images/preloader.gif";
 
-export const Search = () => {
+const Search = () => {
   const [user, setUser] = useState("");
   const {
     numberOfRequests,
@@ -28,7 +28,7 @@ export const Search = () => {
             <p>{error.msg}</p>
           </ErrorWrapper>
         )}
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={(e) => handleSubmit(e)}>
           <div className="form-control">
             <MdSearch />
             <input
@@ -50,6 +50,8 @@ export const Search = () => {
     </section>
   );
 };
+
+export default Search;
 
 const Wrapper = styled.div`
   position: relative;
@@ -120,7 +122,7 @@ const Wrapper = styled.div`
     font-weight: 400;
   }
 `;
-const ErrorWrapper = styled.article`
+const ErrorWrapper = styled.div`
   position: absolute;
   width: 90vw;
   top: 0;
