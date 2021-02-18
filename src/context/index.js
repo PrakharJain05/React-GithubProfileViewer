@@ -72,6 +72,10 @@ export const GithubProvider = ({ children }) => {
   // error
   useEffect(checkRequests, []);
 
+  useEffect(() => {
+    searchGithubUser("PrakharJain05");
+  }, []);
+
   return (
     <GithubContext.Provider
       value={{
